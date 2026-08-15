@@ -112,21 +112,21 @@ public class Client {
         // implement custom comparator.
         System.out.println("\n=== Testing Custom Comparators ===\n");
         
-        // Custom Comparator for sorting by price (ascending)
-        Comparator<Item> priceComparator = new Comparator<Item>() {
-            @Override
-            public int compare(Item item1, Item item2) {
-                return Double.compare(item1.getPrice(), item2.getPrice());
-            }
-        };
+        // // Custom Comparator for sorting by price (ascending)
+        // Comparator<Item> priceComparator = new Comparator<Item>() {
+        //     @Override
+        //     public int compare(Item item1, Item item2) {
+        //         return Double.compare(item1.getPrice(), item2.getPrice());
+        //     }
+        // };
         
         // Custom Comparator for sorting by quantity (ascending)
-        Comparator<Item> quantityComparator = new Comparator<Item>() {
-            @Override
-            public int compare(Item item1, Item item2) {
-                return Integer.compare(item1.getQuantity(), item2.getQuantity());
-            }
-        };
+        // Comparator<Item> quantityComparator = new Comparator<Item>() {
+        //     @Override
+        //     public int compare(Item item1, Item item2) {
+        //         return Integer.compare(item1.getQuantity(), item2.getQuantity());
+        //     }
+        // };
         
         //test sorting and filtering methods with list of items.
         List<Item> allItems = inventory.getAllItems();
