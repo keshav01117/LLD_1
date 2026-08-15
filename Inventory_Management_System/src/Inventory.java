@@ -32,4 +32,24 @@ public class Inventory<T extends Item> {
         return new ArrayList<>(items.values());
     }
 
+    public List<T> filterByPriceRange(double minPrice, double maxPrice) {
+        List<T> filteredItems = new ArrayList<>();
+        for (T item : items.values()) {
+            if (item.getPrice() >= minPrice && item.getPrice() <= maxPrice) {
+                filteredItems.add(item);
+            }
+        }
+        return filteredItems;
+    }
+
+    public List<T> filterByAvailability() {
+        List<T> filteredItems = new ArrayList<>();
+        for (T item : items.values()) {
+            if (item.getQuantity() > 0) {
+                filteredItems.add(item);
+            }
+        }
+        return filteredItems;
+    }
+
 }
