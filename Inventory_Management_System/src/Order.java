@@ -31,7 +31,10 @@ public class Order implements Comparable<Order>{
         if(this.isExpress) {
             return -1;
         }
-        return +1;
+        if(o.isExpress) {
+            return 1;
+        }
+        return this.orderId.compareTo(o.orderId);
     }
 
 }
